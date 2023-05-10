@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="column is-8 is-offset-2">
+    <h3 class="title">Creating a New Note</h3>
+    <div class="box">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="notification is-danger">
+                {{ messages[0] }}
+            </div>
+        {% endif %}
+        {% endwith %}
+        <form method="POST" action="/notes/add">
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="text" name="title" placeholder="Title" autofocus="">
+                </div>
+            </div
+            <br>
+            <br>
+            <div class="field">
+                <div class="control">
+                    <textarea class="textarea is-large" rows="7" name="content" placeholder="Enter your content..."></textarea>
+                </div>
+            </div>
+            <br>
+            <button class="button is-block is-info is-large is-fullwidth">Add</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

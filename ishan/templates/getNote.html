@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- <div class="container" style="padding-top: 2%">
+    
+
+    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+        <div class="thumbnail"  style="padding: 3%">
+            {% for note in notes %}
+                <a href="/notes/edit/{{ note[0] }}/" class="pull-left">
+                    <button type="button" class="btn btn-info">
+                        <span class="glyphicon glyphicon-edit"></span> Edit
+                    </button>
+                </a>
+
+                <a href="/notes/delete/{{ note[0] }}/" class="pull-right">
+                    <button type="button" class="btn btn-danger">
+                        <span class="glyphicon glyphicon-trash"></span> Delete
+                    </button>
+                </a>
+                <br>
+                <br>
+                <h2>{{ note | safe }}</h2>
+            {% endfor %}
+        </div>
+    </div>
+</div> -->
+
+<!-- <div class="column is-4 is-offset-4"> -->
+    <h3 class="title">Viewing all Notes</h3>
+    {% for note in notes %}
+        <div class="box">
+        <h4 class="title">{{note.title}}</h4>
+        <h2>{{ note.content}}</h2>
+        <br>
+        <a href="/notes/get/{{note.id}}">
+            <button type="button" class="button is-block is-info is-small is-pulled-left">
+                Edit / View
+            </button>
+        </a>
+        <a href="/notes/delete/{{note.id}}">
+            <button type="button" class="button is-block is-danger is-small media-right is-pulled-right">
+                Delete
+            </button>
+        </a>
+        <br>
+        </div>
+    {% endfor %}  
+<!-- </div> -->
+{% endblock %}
+
