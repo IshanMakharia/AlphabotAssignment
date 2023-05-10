@@ -1,5 +1,5 @@
 
-# A full-stack web application built using flask-python and SQLite
+# A full-stack Note-taking application built using flask-python and SQLite that allows users to create, read, update, and delete notes.
 
 
 # How to run commands :
