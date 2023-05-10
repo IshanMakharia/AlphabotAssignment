@@ -1,4 +1,3 @@
-# AlphabotAssignment
 
 # A full-stack web application built using flask-python and SQLite
 
